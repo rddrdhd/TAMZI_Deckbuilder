@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DECKBUILDER</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/dark-onsen-css-components.min.css"><!--light/dark theme switch-->
+        <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+        <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+        <script src="js.js"> </script>
+        <style>
+            body{background-color: #333333;
+                font-family: "Ubuntu Light";
+            text-align: center;
+            padding: 10px}
+            .expandable-content{color: #AAAAAA;
+            padding: 20px}
+            .add{
+                color:#CCCCCC;
+                text-align: right;
+                text-decoration: none
+            }
+        </style>
+    </head>
+    <body>
+    <ons-navigator animation="lift" swipeable id="myNavigator" page="page1.html"></ons-navigator>
+<!--HOME-->
+    <template id="page1.html">
+        <ons-page id="page1">
+        <ons-toolbar> <div style="display: block;" class="center">DECKBUILDER</div> </ons-toolbar><br><br><br>
+        <!--div class="textwrapper">
+            <textarea class="textarea textarea--transparent" rows="1" cols="50" id="search" placeholder="Search for cards">
+            </textarea>
+        </div-->
+
+            <ons-pull-hook id="pull-hook">
+
+            </ons-pull-hook>
+            <textarea class="textarea" id="text_search_cs" modifier="underbar" placeholder="Type a card name..." float></textarea> <br>
+            <ons-button modifier="material" id="butt_search_cs" onclick="f_search_cs()">
+                Search cards</ons-button><br><br><br><br>
+            <ons-button modifier="material" id="butt_create_d" onclick="f_create_d()" >
+                Create deck</ons-button>
+            <ons-button modifier="material" id="butt_show_ds" onclick="f_show_ds()">
+                Show decks</ons-button>
+
+
+            <br><br><br><ons-button modifier="material" id="butt_rand" onclick="f_gimme_html_pic(12345)">Random button</ons-button><br><br>Optimalizováno pro <ons-icon icon="fa-firefox"></ons-icon><br>
+
+        </ons-page>
+    </template>
+
+    <template id="page2.html">
+        <ons-page id="page2">
+            <ons-toolbar>
+                <div class="left"><ons-back-button>Decks</ons-back-button></div>
+
+
+                <div class="center"></div>
+            </ons-toolbar>
+            <ons-list id="list_d"></ons-list>
+        </ons-page>
+    </template>
+
+    <template id="page3.html">
+        <ons-page id="page3">
+            <ons-toolbar>
+                <div class="left"><ons-back-button>Cards</ons-back-button></div>
+
+
+                <div class="center"></div>
+            </ons-toolbar>
+            <ons-list id="list_c"></ons-list>
+        </ons-page>
+    </template>
+    <ons-dialog id="dialog_create_d">
+
+        <div style="text-align: center; padding: 10px;">
+        <textarea class="textarea" id="text_name_d" modifier="underbar" placeholder="Deck Name" float></textarea> <br>
+        <textarea class="textarea" id="text_note_d" modifier="underbar" placeholder="Deck Note" float></textarea> <br>
+            <ons-button modifier="material" id="butt_create_d_cancel" onclick="f_create_d_cancel()">Cancel</ons-button>
+            <ons-button modifier="material" id="butt_create_d_submit" onclick="f_create_d_submit()">Create deck</ons-button>
+        </div>
+    </ons-dialog>
+    <ons-dialog id="dialog_add_c">
+
+        <div style="text-align: center; padding: 10px;">
+            <select id="select_d"></select>
+
+            <ons-button modifier="material" id="butt_add_c_cancel" onclick="f_add_c_cancel()">Cancel</ons-button>
+            <ons-button modifier="material" id="butt_add_c_submit">Add card to deck</ons-button>
+        </div>
+    </ons-dialog>
+
+
+    </body>
+</html>
