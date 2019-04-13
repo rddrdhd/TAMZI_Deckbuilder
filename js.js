@@ -21,15 +21,6 @@ document.addEventListener('init', function(event) {
     }
 
 });
-function f_refresh_gest(){
-    var pullHook = document.getElementById('pull-hook');
-
-
-
-    pullHook.onAction = function(done) {
-        location.reload();
-    };
-}
 
 function f_create_d() {
     document.getElementById("dialog_create_d").show();
@@ -67,18 +58,24 @@ function f_show_ds(){
 
         onsItem.setAttribute('modifier', 'tappable');
         onsItem.setAttribute('expandable', '');
-        onsItem.innerHTML = "<b>"+parsed.name+"</b>";
-        onsItem.innerHTML+="<div class=expandable-content>" +
-            parsed.note + "<br>" + "</div>";
-        //TODO nezobrazují se decky?!
-        /*for(var c in parsed.cards){
-            card= f_gimme_card(c);
-            onsItem.innerHTML+="<img src='" +
-                card.imageUrl+"' alt='Image is not avaible.'>";
-        }*/
+        deck_expand(onsItem,parsed);
         document.getElementById('list_d').appendChild(onsItem)
 
     }
+}
+
+function deck_expand(onsItem, deck){
+
+    onsItem.innerHTML = "<b>"+deck.name+"</b>";
+    onsItem.innerHTML+="<div class=expandable-content>" +
+        deck.note + "<br>" + "</div>";
+    var imgstring;
+    for(var c in deck.cards){
+        var card= f_gimme_card(deck.cards[c]);
+
+        window.console.log( card )//"<img src='" + card.imageUrl+"' alt='Image is not avaible.'>");
+    }
+
 }
 
 function f_search_cs(){
@@ -88,30 +85,34 @@ function f_search_cs(){
         url: 'https://api.magicthegathering.io/v1/cards?name=' + search_str,
         success: function(result){
             for(var i = 0; i< 10; i++){
-                card = result["cards"][i];
+                var card = result["cards"][i];
                 if(card.imageUrl !== undefined){
                     var onsItem = document.createElement("ons-list-item");
 
                     onsItem.setAttribute('modifier','tappable');
                     onsItem.setAttribute('expandable','');
-onsItem.innerHTML="<b>"+card.name+"</b>&nbsp;("+card.set+")";
-// onsItem.innerHTML+="<div class=expandable-content><i>"+card.text + "</i><br>Main color:" + card.colors[0];
-
-                        onsItem.innerHTML+="<div class=expandable-content>" +
-                            "<img src='" + card.imageUrl+"' alt='Image is not avaible.'>";
-                            //+  f_gimme_html_pic(card.multiverseid);
-
-                    onsItem.innerHTML+="<a id=\"myLink\" title=\"Click to do something\"\n" +
-                        " href=\"#\" onclick=\"f_add_c("+card.multiverseid+");return false;\"><h2  class='add'>⊕</h2></a>"+
-                        "</div>";
+card_expand(onsItem, card)
                     document.getElementById('list_c').appendChild(onsItem);
-                    //if(card.name in (document.getElementsByTagName('ons-list-item'))){ }
 
                 }
                 }
         }
     })
 }
+function card_expand(onsItem, card){
+//card_name
+    onsItem.innerHTML="<b>"+card.name+"</b>&nbsp;("+card.set+")";
+//image
+    onsItem.innerHTML+="<div class=expandable-content>" +
+        "<img src='" + card.imageUrl+"' alt='Image is not avaible.'>"+
+//add card
+        "<a id=\"myLink\" title=\"Click to add card\"\n" +
+        " href=\"#\" onclick=\"f_add_c("+card.multiverseid+");return false;\"><h2  class='add'>⊕ Add card</h2></a>"
+
+//end div
+        +"</div>" ;
+}
+//TODO nefunguje
 function f_gimme_card(multiverseid){
     var jqxhr = $.ajax({
         dataType: "json",
@@ -120,8 +121,8 @@ function f_gimme_card(multiverseid){
             return result["card"];
         }
     });
-}
-function f_gimme_html_pic(multiverseid){ //TODO nefunguje v innerHTML^^^
+
+function f_gimme_html_pic(multiverseid){ //TODO funguje pomalu jak cyp
     var jqxhr = $.ajax({
         dataType: "json",
         url: 'https://api.magicthegathering.io/v1/cards/' + multiverseid,
@@ -152,6 +153,7 @@ function  f_add_c(multiverseid){
     });
     document.getElementById("butt_add_c_submit").setAttribute('onclick', 'f_add_c_submit('+multiverseid+')');
     document.getElementById("dialog_add_c").show();
+
     }
 
 function f_add_c_submit(multiverseid){
@@ -166,11 +168,21 @@ function f_add_c_submit(multiverseid){
     console.log(deck);
     console.log(deck_JSON);
     document.getElementById("dialog_add_c").hide();
-//TODO karty v localstorage az po aktualizaci???
+// karty v localstorage az po aktualizaci???
+    location.reload();
 
 
 }
 function f_add_c_cancel(){
     console.log("Here we go closin da add_c dialog");
     document.getElementById("dialog_add_c").hide();
+}
+
+
+function f_refresh_gest(){
+    console.log("Here we go refreshing da page");
+    var pullHook = document.getElementById('pull-hook');
+    pullHook.onAction = function(done) {
+        location.reload();
+    };
 }
