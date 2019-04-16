@@ -1,3 +1,6 @@
+//caiuse.com - hledá co můžu na jaké prohlížeči použít
+//INFINITESCROLL na výsledky hledání karet
+
 document.addEventListener('init', function(event) {
 
     var page = event.target;
@@ -63,18 +66,29 @@ function f_show_ds(){
 
     }
 }
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+}
 
 function deck_expand(onsItem, deck){
-
-    onsItem.innerHTML = "<b>"+deck.name+"</b>";
-    onsItem.innerHTML+="<div class=expandable-content>" +
-        deck.note + "<br>" + "</div>";
-    var imgstring;
+    var imgstring = "";
     for(var c in deck.cards){
         var card= f_gimme_card(deck.cards[c]);
-
-        window.console.log( card )//"<img src='" + card.imageUrl+"' alt='Image is not avaible.'>");
+        imgstring= (imgstring+"<a href='" +
+            "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid="+
+            deck.cards[c]+"&type=card"+"'>"+
+            "<img src='" +
+            "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid="+
+            deck.cards[c]+"&type=card"+
+            "' alt='Image is not avaible.'"+
+            " class='responsive'></a>");
     }
+    onsItem.innerHTML = "<b>"+deck.name+"</b>";
+    onsItem.innerHTML+="<div class=expandable-content>" +
+        deck.note + "<br>"
++imgstring
+
+        + "</div>";
 
 }
 
@@ -91,7 +105,7 @@ function f_search_cs(){
 
                     onsItem.setAttribute('modifier','tappable');
                     onsItem.setAttribute('expandable','');
-card_expand(onsItem, card)
+card_expand(onsItem, card);
                     document.getElementById('list_c').appendChild(onsItem);
 
                 }
@@ -113,15 +127,15 @@ function card_expand(onsItem, card){
         +"</div>" ;
 }
 //TODO nefunguje
-function f_gimme_card(multiverseid){
+function f_gimme_card(multiverseid) {
     var jqxhr = $.ajax({
         dataType: "json",
         url: 'https://api.magicthegathering.io/v1/cards/' + multiverseid,
-        success: function(result){
+        success: function (result) {
             return result["card"];
         }
     });
-
+}
 function f_gimme_html_pic(multiverseid){ //TODO funguje pomalu jak cyp
     var jqxhr = $.ajax({
         dataType: "json",
