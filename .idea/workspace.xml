@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a9dd29e-10fd-41b0-96ac-3f9b04337cf6" name="Default Changelist" comment="PICS IN DECKS done&#10;TODO: infinitescroll">
+    <list default="true" id="4a9dd29e-10fd-41b0-96ac-3f9b04337cf6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/js.js" afterDir="false" />
@@ -16,28 +16,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44318983">
+    <splitter split-orientation="horizontal" split-proportion="0.2159492">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="218">
-                  <caret line="49" column="88" selection-start-line="49" selection-start-column="82" selection-end-line="49" selection-end-column="88" />
+                <state relative-caret-position="311">
+                  <caret line="49" column="91" lean-forward="true" selection-start-line="49" selection-start-column="91" selection-end-line="49" selection-end-column="91" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#ons-dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#ons-dialog#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1357">
-                  <caret line="81" column="26" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="26" />
+                <state relative-caret-position="408">
+                  <caret line="148" column="19" lean-forward="true" selection-start-line="148" selection-start-column="19" selection-end-line="148" selection-end-column="19" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="n#!!block;n#f_create_d_cancel#0" />
@@ -54,12 +55,21 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="505">
-                  <caret line="38" column="38" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+                <state relative-caret-position="256">
+                  <caret line="98" column="46" lean-forward="true" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="n#!!block;n#f_create_d_cancel#0" />
+                    <element signature="n#!!block;n#f_delete_deck#0" />
+                    <element signature="n#!!block;n#f_create_d_submit#0" />
+                    <element signature="n#!!block;n#onlyUnique#0" />
+                    <element signature="n#!!block;n#f_search_cs#0" />
+                    <element signature="n#!!block;n#card_expand#0" />
                     <element signature="e#7#13#1" expanded="true" />
+                    <element signature="n#!!block;n#f_gimme_card#0" />
+                    <element signature="n#!!block;n#f_gimme_html_pic#0" />
+                    <element signature="n#!!block;n#f_add_c#0" />
+                    <element signature="n#!!block;n#f_add_c_submit#0" />
+                    <element signature="n#!!block;n#f_add_c_cancel#0" />
                   </folding>
                 </state>
               </provider>
@@ -92,6 +102,8 @@
       <find>delete</find>
       <find>key in l</find>
       <find>localSt</find>
+      <find>image is not</find>
+      <find>[</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,10 +128,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1943" />
-    <option name="y" value="584" />
-    <option name="width" value="1028" />
-    <option name="height" value="873" />
+    <option name="x" value="437" />
+    <option name="y" value="1192" />
+    <option name="width" value="1080" />
+    <option name="height" value="676" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -202,7 +214,8 @@
       <workItem from="1555950577015" duration="1436000" />
       <workItem from="1556009556323" duration="131000" />
       <workItem from="1556123589287" duration="1962000" />
-      <workItem from="1556536480284" duration="1802000" />
+      <workItem from="1556536480284" duration="1960000" />
+      <workItem from="1556560401693" duration="5159000" />
     </task>
     <task id="LOCAL-00001" summary="DECKBUILDERRR">
       <created>1553623272224</created>
@@ -232,17 +245,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555402315958</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="DELETE DECKS done&#10;TODO: infinitescroll">
+      <created>1556538409934</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556538409934</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46109000" />
+    <option name="totallyTimeSpent" value="51426000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="584" width="1440" height="873" extended-state="6" />
+    <frame x="257" y="1107" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23959827" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.14396612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -269,29 +289,40 @@
     <MESSAGE value="search cards done" />
     <MESSAGE value="TODO pics in decks" />
     <MESSAGE value="PICS IN DECKS done&#10;TODO: infinitescroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="PICS IN DECKS done&#10;TODO: infinitescroll" />
+    <MESSAGE value="DELETE DECKS done&#10;TODO: infinitescroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="DELETE DECKS done&#10;TODO: infinitescroll" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="49" column="88" selection-start-line="49" selection-start-column="82" selection-end-line="49" selection-end-column="88" />
+        <state relative-caret-position="311">
+          <caret line="49" column="91" lean-forward="true" selection-start-line="49" selection-start-column="91" selection-end-line="49" selection-end-column="91" />
           <folding>
             <element signature="n#style#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ons-dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ons-dialog#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="38" column="38" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        <state relative-caret-position="256">
+          <caret line="98" column="46" lean-forward="true" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!block;n#f_create_d_cancel#0" />
+            <element signature="n#!!block;n#f_delete_deck#0" />
+            <element signature="n#!!block;n#f_create_d_submit#0" />
+            <element signature="n#!!block;n#onlyUnique#0" />
+            <element signature="n#!!block;n#f_search_cs#0" />
+            <element signature="n#!!block;n#card_expand#0" />
             <element signature="e#7#13#1" expanded="true" />
+            <element signature="n#!!block;n#f_gimme_card#0" />
+            <element signature="n#!!block;n#f_gimme_html_pic#0" />
+            <element signature="n#!!block;n#f_add_c#0" />
+            <element signature="n#!!block;n#f_add_c_submit#0" />
+            <element signature="n#!!block;n#f_add_c_cancel#0" />
           </folding>
         </state>
       </provider>

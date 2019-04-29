@@ -21,30 +21,28 @@ document.addEventListener('init', function(event) {
     else if (page.id === 'page3') {
         f_search_cs();
         console.log("cards page!!!");
+
     }
 
 });
+
 function f_delete_deck(thisaf){
     ons.notification.confirm({
-        message: 'Do you want to delete deck '+thisaf+'?',
+        message: 'Do you want to delete deck \"'+thisaf+'\"?',
         callback: function(answer) {
+
             console.log(thisaf.toString());
             for(var key in localStorage){
-
                 var i = localStorage.getItem(key);
                 var item = JSON.parse(i);
+
                 if(item.name === thisaf.toString()){
                     console.log("DING DING DING");
                     localStorage.removeItem(key);
                     location.reload();
-
                 }
-                else{
-                    console.log("nope")
-                }
-
+                else{ console.log("nope") }
             }
-
         }
     });
 }
@@ -85,11 +83,12 @@ function f_show_ds(){
 
         onsItem.setAttribute('modifier', 'tappable');
         onsItem.setAttribute('expandable', '');
+        onsItem.setAttribute('data-key', myKey.toString());
         deck_expand(onsItem,parsed);
         document.getElementById('list_d').appendChild(onsItem)
-
     }
 }
+
 function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
 }
@@ -98,24 +97,21 @@ function deck_expand(onsItem, deck){
     var imgstring = "";
     for(var c in deck.cards){
         var card= f_gimme_card(deck.cards[c]);
-        imgstring= (imgstring+"<a href='" +
-            "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid="+
-            deck.cards[c]+"&type=card"+"'>"+
-            "<img src='" +
+//card image with a href
+        imgstring= (imgstring+
+            "<img onclick='f_show_c("+deck.cards[c]+")' src='" +
             "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid="+
             deck.cards[c]+"&type=card"+
             "' alt='Image is not avaible.'"+
             " class='responsive'></a>");
     }
+
     onsItem.innerHTML = "<b>"+deck.name+"</b>";
     onsItem.innerHTML+="<div class=expandable-content>" +
-        deck.note + "<br>"
-+imgstring
-+  "<a id=\"myLink2\" title=\"Click to delete deck\"\n" +
+        deck.note + "<br>" +
+        imgstring + "<a id=\"myLink2\" title=\"Click to delete deck\"\n" +
         " href=\"#\" onclick=\"f_delete_deck('"+deck.name+"');\"><h2  class='add'>☠ Delete deck</h2></a>"
-
         + "</div>";
-
 }
 
 function f_search_cs(){
@@ -133,12 +129,12 @@ function f_search_cs(){
                     onsItem.setAttribute('expandable','');
                     card_expand(onsItem, card);
                     document.getElementById('list_c').appendChild(onsItem);
-
                 }
-                }
+            }
         }
     })
 }
+
 function card_expand(onsItem, card){
 //card_name
     onsItem.innerHTML="<b>"+card.name+"</b>&nbsp;("+card.set+")";
@@ -152,6 +148,7 @@ function card_expand(onsItem, card){
 //end div
         +"</div>" ;
 }
+
 function f_gimme_card(multiverseid) {
     var jqxhr = $.ajax({
         dataType: "json",
@@ -161,6 +158,7 @@ function f_gimme_card(multiverseid) {
         }
     });
 }
+
 function f_gimme_html_pic(multiverseid){ //funguje hodne pomalu
     var jqxhr = $.ajax({
         dataType: "json",
@@ -174,6 +172,7 @@ function f_gimme_html_pic(multiverseid){ //funguje hodne pomalu
         }
     });
 }
+
 function  f_add_c(multiverseid){
 
     var jqxhr = $.ajax({
@@ -212,11 +211,11 @@ function f_add_c_submit(multiverseid){
 
 
 }
+
 function f_add_c_cancel(){
     console.log("Here we go closin da add_c dialog");
     document.getElementById("dialog_add_c").hide();
 }
-
 
 function f_refresh_gest(){
     console.log("Here we go refreshing da page");
@@ -224,4 +223,18 @@ function f_refresh_gest(){
     pullHook.onAction = function(done) {
         location.reload();
     };
+}
+
+function f_show_c(multiverseid, deckkey){
+    var imageurl = "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid="+ multiverseid+"&type=card";
+    var modal = document.querySelector('ons-modal');
+    modal.innerHTML = "<br><br><br><div class='center'><img src='" + imageurl+"' alt='Somenthing gone wrong'><!--font color='#f0f8ff'> Loading...</font--> </div>";
+    modal.innerHTML += "<ons-button modifier='quiet'>Delete card from deck</ons-button>";
+    modal.innerHTML += "<br><br><br><ons-button modifier='quiet' onclick='f_hide_c()'>Back</ons-button>";
+    modal.show();
+    console.log(deckkey)
+}
+
+function f_hide_c(){
+    document.getElementById('ons-modal').hide();
 }

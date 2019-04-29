@@ -47,34 +47,34 @@
                 Show decks</ons-button>
 
 
-            <br><br><br><ons-button modifier="material" id="butt_rand" onclick="f_delete_deck()">Random button</ons-button><br><br>Optimalizováno pro <ons-icon icon="fa-firefox"></ons-icon><br>
+            <br><br><br><ons-button modifier="material" id="butt_rand" onclick="f_show_c(3,3)">Random button</ons-button><br><br>Optimalizováno pro <ons-icon icon="fa-firefox"></ons-icon><br>
 
         </ons-page>
     </template>
-
+<!--DECKS-->
     <template id="page2.html">
         <ons-page id="page2">
             <ons-toolbar>
                 <div class="left"><ons-back-button>Decks</ons-back-button></div>
-
-
-                <div class="center"></div>
             </ons-toolbar>
             <ons-list id="list_d"></ons-list>
         </ons-page>
     </template>
-
+<!--CARDS-->
     <template id="page3.html">
         <ons-page id="page3">
+
+
             <ons-toolbar>
                 <div class="left"><ons-back-button>Cards</ons-back-button></div>
-
-
                 <div class="center"></div>
             </ons-toolbar>
             <ons-list id="list_c"></ons-list>
+
+
         </ons-page>
     </template>
+<!--CREATE DECK-->
     <ons-dialog id="dialog_create_d">
 
         <div style="text-align: center; padding: 10px;">
@@ -84,6 +84,7 @@
             <ons-button modifier="material" id="butt_create_d_submit" onclick="f_create_d_submit()">Create deck</ons-button>
         </div>
     </ons-dialog>
+<!--ADD CARD-->
     <ons-dialog id="dialog_add_c">
 
         <div style="text-align: center; padding: 10px;">
@@ -93,6 +94,13 @@
             <ons-button modifier="material" id="butt_add_c_submit">Add card to deck</ons-button>
         </div>
     </ons-dialog>
+
+    <!--SHOW CARD-->
+    <ons-modal id = "ons-modal" direction="up" animation="lift">
+        <div  style="text-align: center">
+
+        </div>
+    </ons-modal>
 
 
     </body>
