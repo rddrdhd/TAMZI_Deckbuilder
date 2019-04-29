@@ -140,11 +140,13 @@ function card_expand(onsItem, card){
     onsItem.innerHTML="<b>"+card.name+"</b>&nbsp;("+card.set+")";
 //image
     onsItem.innerHTML+="<div class=expandable-content>" +
-        "<img src='" + card.imageUrl+"' alt='Image is not avaible.'>"+
+        "<img src='" + card.imageUrl+"' alt='"+card.name+"("+card.type+")'><br>"+
 //add card
-        "<a id=\"myLink\" title=\"Click to add card\"\n" +
-        " href=\"#\" onclick=\"f_add_c("+card.multiverseid+");return false;\"><h2  class='add'>⊕ Add card</h2></a>"
-
+       /* "<a id=\"myLink\" title=\"Click to add card\"\n" +
+        " href=\"#\" onclick=\"f_add_c("+card.multiverseid+");return false;\">"+
+        "<h2  class='add'>⊕ Add card</h2></a>"+*/
+       "<ons-button modifier='quiet' onclick='f_add_c("+card.multiverseid+")'>Add card</ons-button>"
+        //
 //end div
         +"</div>" ;
 }
