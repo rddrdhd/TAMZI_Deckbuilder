@@ -24,6 +24,30 @@ document.addEventListener('init', function(event) {
     }
 
 });
+function f_delete_deck(thisaf){
+    ons.notification.confirm({
+        message: 'Do you want to delete deck '+thisaf+'?',
+        callback: function(answer) {
+            console.log(thisaf.toString());
+            for(var key in localStorage){
+
+                var i = localStorage.getItem(key);
+                var item = JSON.parse(i);
+                if(item.name === thisaf.toString()){
+                    console.log("DING DING DING");
+                    localStorage.removeItem(key);
+                    location.reload();
+
+                }
+                else{
+                    console.log("nope")
+                }
+
+            }
+
+        }
+    });
+}
 
 function f_create_d() {
     document.getElementById("dialog_create_d").show();
@@ -87,6 +111,8 @@ function deck_expand(onsItem, deck){
     onsItem.innerHTML+="<div class=expandable-content>" +
         deck.note + "<br>"
 +imgstring
++  "<a id=\"myLink2\" title=\"Click to delete deck\"\n" +
+        " href=\"#\" onclick=\"f_delete_deck('"+deck.name+"');\"><h2  class='add'>☠ Delete deck</h2></a>"
 
         + "</div>";
 
@@ -105,7 +131,7 @@ function f_search_cs(){
 
                     onsItem.setAttribute('modifier','tappable');
                     onsItem.setAttribute('expandable','');
-card_expand(onsItem, card);
+                    card_expand(onsItem, card);
                     document.getElementById('list_c').appendChild(onsItem);
 
                 }
@@ -126,7 +152,6 @@ function card_expand(onsItem, card){
 //end div
         +"</div>" ;
 }
-//TODO nefunguje
 function f_gimme_card(multiverseid) {
     var jqxhr = $.ajax({
         dataType: "json",
@@ -136,7 +161,7 @@ function f_gimme_card(multiverseid) {
         }
     });
 }
-function f_gimme_html_pic(multiverseid){ //TODO funguje pomalu jak cyp
+function f_gimme_html_pic(multiverseid){ //funguje hodne pomalu
     var jqxhr = $.ajax({
         dataType: "json",
         url: 'https://api.magicthegathering.io/v1/cards/' + multiverseid,
