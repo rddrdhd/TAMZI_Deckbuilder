@@ -109,8 +109,10 @@ function deck_expand(onsItem, deck){
     onsItem.innerHTML = "<b>"+deck.name+"</b>";
     onsItem.innerHTML+="<div class=expandable-content>" +
         deck.note + "<br>" +
-        imgstring + "<a id=\"myLink2\" title=\"Click to delete deck\"\n" +
-        " href=\"#\" onclick=\"f_delete_deck('"+deck.name+"');\"><h2  class='add'>☠ Delete deck</h2></a>"
+        //"<ons-button modifier='quiet' onclick='f_delete_deck("+deck.name+")'>Delete deck \""+deck.name+"\"</ons-button><br>"+
+
+    imgstring +
+        "<a id=\"myLink2\" title=\"Click to delete deck\"\n" +        " href=\"#\" onclick=\"f_delete_deck('"+deck.name+"');\"><h2  class='add'>☠ Delete deck</h2></a>"
         + "</div>";
 }
 
@@ -145,7 +147,7 @@ function card_expand(onsItem, card){
        /* "<a id=\"myLink\" title=\"Click to add card\"\n" +
         " href=\"#\" onclick=\"f_add_c("+card.multiverseid+");return false;\">"+
         "<h2  class='add'>⊕ Add card</h2></a>"+*/
-       "<ons-button modifier='quiet' onclick='f_add_c("+card.multiverseid+")'>Add card</ons-button>"
+       "<ons-button modifier='quiet' onclick='f_add_c("+card.multiverseid+")'>Add card to deck</ons-button>"
         //
 //end div
         +"</div>" ;
@@ -231,8 +233,8 @@ function f_show_c(multiverseid, deckkey){
     var imageurl = "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid="+ multiverseid+"&type=card";
     var modal = document.querySelector('ons-modal');
     modal.innerHTML = "<br><br><br><div class='center'><img src='" + imageurl+"' alt='Somenthing gone wrong'><!--font color='#f0f8ff'> Loading...</font--> </div>";
-    modal.innerHTML += "<ons-button modifier='quiet'>Delete card from deck</ons-button>";
-    modal.innerHTML += "<br><br><br><ons-button modifier='quiet' onclick='f_hide_c()'>Back</ons-button>";
+    modal.innerHTML += "<ons-button modifier='quiet'>Delete card from this deck</ons-button>";
+    modal.innerHTML += "<br><br><br><ons-button modifier='material' onclick='f_hide_c()'>Back</ons-button>";
     modal.show();
     console.log(deckkey)
 }

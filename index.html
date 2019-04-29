@@ -10,20 +10,38 @@
         <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
         <script src="js.js"> </script>
         <style>
-            body{background-color: #333333;
-                font-family: "Ubuntu Light";
-            text-align: center;
-            padding: 10px}
-            .expandable-content{color: #AAAAAA;
+            body{
+                text-align: center;
+                padding: 10px}
+            .list-item{
+                color: #ecfae8;
+            }
+            .expandable-content{color: #F5FAFA;
             padding: 20px}
             .add{
-                color:#CCCCCC;
+                color:#F5FAFA;
                 text-align: right;
                 text-decoration: none
             }
             .responsive {
                 max-width: 30%;
                 height: auto;
+            }
+            .button{
+                background:#666666;
+            }
+            .button--material{
+                background: #666666;
+                color: #fff;
+            }
+            .button--quiet{
+                color: #b1db22;
+            }
+            .back-button{
+                color: #b1db22;
+            }
+            .back-button__icon{
+                fill: #b1db22;
             }
         </style>
     </head>
@@ -91,7 +109,7 @@
             <select id="select_d"></select>
 
             <ons-button modifier="material" id="butt_add_c_cancel" onclick="f_add_c_cancel()">Cancel</ons-button>
-            <ons-button modifier="material" id="butt_add_c_submit">Add card to deck</ons-button>
+            <ons-button modifier="material" id="butt_add_c_submit">Add card</ons-button>
         </div>
     </ons-dialog>
 
