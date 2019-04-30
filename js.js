@@ -217,7 +217,7 @@ function f_add_c_submit(multiverseid){
     console.log(deck);
     console.log(deck_JSON);
     document.getElementById("dialog_add_c").hide();
-// karty v localstorage az po aktualizaci???
+
     location.reload();
 
 
@@ -265,7 +265,9 @@ function f_hide_c(){
 }
 
 function f_show_ie(){
-    deck_selector('#select_d_import');
+    deck_selector('#select_d_export');
+document.getElementById('generated_deck').style.visibility='hidden';
+document.getElementById('butt_copy').style.visibility='hidden';
     document.getElementById('dialog_ie').show();
 }
 function f_import_d(){
@@ -273,8 +275,47 @@ function f_import_d(){
 }
 function f_export_d(){
     console.log("exporting deck");
+    var deck_key = $('#select_d_export').children("option:selected").val();
+    var generated = document.getElementById('generated_deck');
+    var deck =JSON.parse(localStorage.getItem(deck_key));
+    generated.value= deck.name+";"+deck.note+";"+deck.cards;
+
+    document.getElementById('generated_deck').style.visibility='visible';
+    document.getElementById('butt_copy').style.visibility='visible';
 }
 function f_hide_ie(){
 
     document.getElementById('dialog_ie').hide();
 }
+function f_copy(){
+    const copyInput = document.querySelector('#generated_deck');
+    const copyButton = document.querySelector('#butt_copy');
+    copyButton.addEventListener('click', () => {
+
+        // Je podpora pro execCommand('copy') ?
+        if (document.queryCommandSupported('copy')) {
+
+            // Vybere text uvnitř inputu
+            copyInput.select();
+            // Zkopíruje vybraný text
+            const isCopied = document.execCommand('copy');
+            console.log('Kopírování se ' + (isCopied ? '' : 'ne') + 'podařilo.')
+
+        }
+
+    })
+}
+/*
+function f_copy() {//TODO?
+var copy_deck = document.querySelector('#generated_deck');
+    var copy_button = document.querySelector('#butt_copy');
+    copy_button.addEventListener('click',() =>{
+    if(document.queryCommandSupported('copy')){
+        const range=document.createRange();
+        range.selectNode(copy_deck);
+        window.getSelection().addRange(range);
+        const isCopied = document.execCommand('copy');
+        console.log(isCopied ? 'Zkopírováno' : 'Kopírování se nezdařilo');
+        window.getSelection().removeRange(range);
+    }})
+}*/

@@ -135,11 +135,15 @@
             <textarea class="textarea" id="text_import" modifier="underbar" placeholder="Insert the deck text..." float></textarea> <br>
            <br> <ons-button modifier="material" id="butt_import_deck" onclick="f_import_d()">Import deck</ons-button>
                 <br><br>
-                <br><br>
+                <br><span id="info">Choose, if you want import or export deck.</span><br>
+            <br>
                 <br>
-            <select id="select_d_import"></select>
-           <br><br> <ons-button modifier="material" id="butt_export_deck" onclick="f_export_d()">Export deck</ons-button>
-<br><br><br>     <ons-back-button onclick="f_hide_ie()">Back</ons-back-button>
+            <select id="select_d_export"></select>
+           <br><br> <ons-button modifier="flat" id="butt_export_deck" onclick="f_export_d()">Export deck</ons-button>
+<br><br><br> <input id="generated_deck" type="text" value="deck" readonly>
+
+            <ons-button type=hidden modifier="flat" id = "butt_copy" onclick="f_copy()">Copy to clipboard</ons-button>
+         <br>   <ons-back-button onclick="f_hide_ie()">Back</ons-back-button>
 
         </div>
     </ons-dialog>
