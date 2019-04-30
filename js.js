@@ -189,17 +189,20 @@ function  f_add_c(multiverseid){
         success: function(result){
                 var card = result["card"];
     //deck selector
-            for(var i = 0; i< localStorage.length; i++) {
-                var myKey = localStorage.key(i);
-                var json = localStorage.getItem(myKey);
-                var parsed = JSON.parse(json);
-                $('#select_d').append('<option value="'+myKey+'">'+parsed.name+'</option>');
-            }
+            deck_selector('#select_d');
         }
     });
     document.getElementById("butt_add_c_submit").setAttribute('onclick', 'f_add_c_submit('+multiverseid+')');
     document.getElementById("dialog_add_c").show();
 
+    }
+    function deck_selector(element_id){
+        for(var i = 0; i< localStorage.length; i++) {
+            var myKey = localStorage.key(i);
+            var json = localStorage.getItem(myKey);
+            var parsed = JSON.parse(json);
+            $(element_id).append('<option value="'+myKey+'">'+parsed.name+'</option>');
+        }
     }
 
 function f_add_c_submit(multiverseid){
@@ -251,7 +254,7 @@ function f_delete_card(multiverseid, deckkey){
     deck.cards.pop(multiverseid);
     //localStorage[deckkey]=deck;
     var deck_JSON = JSON.stringify(deck);
-    localStorage.setItem(deckkey,deck_JSON);//TODO
+    localStorage.setItem(deckkey,deck_JSON);
     location.reload();
 
 
@@ -259,4 +262,19 @@ function f_delete_card(multiverseid, deckkey){
 
 function f_hide_c(){
     document.getElementById('ons-modal').hide();
+}
+
+function f_show_ie(){
+    deck_selector('#select_d_import');
+    document.getElementById('dialog_ie').show();
+}
+function f_import_d(){
+    console.log("importing deck");
+}
+function f_export_d(){
+    console.log("exporting deck");
+}
+function f_hide_ie(){
+
+    document.getElementById('dialog_ie').hide();
 }

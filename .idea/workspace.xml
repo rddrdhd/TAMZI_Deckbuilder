@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a9dd29e-10fd-41b0-96ac-3f9b04337cf6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/js.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -15,34 +16,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47326732">
+    <splitter split-orientation="horizontal" split-proportion="0.42382812">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+                <state relative-caret-position="476">
+                  <caret line="142" selection-start-line="142" selection-end-line="142" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#ons-dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#ons-dialog#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#ons-dialog#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="202" column="37" selection-start-line="202" selection-start-column="37" selection-end-line="202" selection-end-column="37" />
+                <state relative-caret-position="2535">
+                  <caret line="207" column="37" selection-start-line="207" selection-start-column="37" selection-end-line="207" selection-end-column="37" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="n#!!block;n#f_create_d_submit#0" />
                     <element signature="n#!!block;n#onlyUnique#0" />
-                    <element signature="n#!!block;n#f_search_cs#0" />
                     <element signature="n#!!block;n#f_gimme_html_pic#0" />
                     <element signature="n#!!block;n#f_add_c_cancel#0" />
                   </folding>
@@ -57,8 +58,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="218">
-                  <caret line="126" column="31" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
+                <state relative-caret-position="431">
+                  <caret line="267" column="38" lean-forward="true" selection-start-line="267" selection-start-column="38" selection-end-line="267" selection-end-column="38" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="n#!!block;n#f_create_d_submit#0" />
@@ -93,7 +94,6 @@
       <find>show</find>
       <find>add</find>
       <find>console.log</find>
-      <find>random</find>
       <find>delete</find>
       <find>key in l</find>
       <find>localSt</find>
@@ -105,6 +105,8 @@
       <find>getitem</find>
       <find>delete card</find>
       <find>deck.c</find>
+      <find>random</find>
+      <find>back</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -113,8 +115,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -128,10 +130,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="y" value="27" />
-    <option name="width" value="720" />
-    <option name="height" value="873" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="684" />
+    <option name="y" value="1366" />
+    <option name="width" value="697" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -217,7 +220,9 @@
       <workItem from="1556536480284" duration="1960000" />
       <workItem from="1556560401693" duration="9864000" />
       <workItem from="1556606292513" duration="3878000" />
-      <workItem from="1556610738625" duration="602000" />
+      <workItem from="1556610738625" duration="5479000" />
+      <workItem from="1556630976581" duration="100000" />
+      <workItem from="1556658612150" duration="1617000" />
     </task>
     <task id="LOCAL-00001" summary="DECKBUILDERRR">
       <created>1553623272224</created>
@@ -275,29 +280,52 @@
       <option name="project" value="LOCAL" />
       <updated>1556570876385</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ROZJETO NA TELEFONU&#10;TODO: infinitescroll">
+      <created>1556611364917</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1556611364917</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ROZJETO NA TELEFONU s hudbou a TODOs">
+      <created>1556618260291</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1556618260291</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60611000" />
+    <option name="totallyTimeSpent" value="67205000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="720" height="873" extended-state="4" />
+    <frame x="257" y="1107" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20373027" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2773465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32971507" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.30664858" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.421981" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -316,33 +344,35 @@
     <MESSAGE value="Vyskakovaci okno s obrazkem karty DONE&#10;TODO: vymazat kartu z decku, infinitescroll" />
     <MESSAGE value="Hezci tlacitko &quot;add card&quot;&#10;TODO: vymazat kartu z decku, infinitescroll" />
     <MESSAGE value="TODO: vymazat kartu z decku, infinitescroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="TODO: vymazat kartu z decku, infinitescroll" />
+    <MESSAGE value="ROZJETO NA TELEFONU&#10;TODO: infinitescroll" />
+    <MESSAGE value="ROZJETO NA TELEFONU s hudbou a TODOs" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROZJETO NA TELEFONU s hudbou a TODOs" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2535">
+          <caret line="207" column="37" selection-start-line="207" selection-start-column="37" selection-end-line="207" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#f_create_d_submit#0" />
+            <element signature="n#!!block;n#onlyUnique#0" />
+            <element signature="n#!!block;n#f_gimme_html_pic#0" />
+            <element signature="n#!!block;n#f_add_c_cancel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="476">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
           <folding>
             <element signature="n#style#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ons-dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ons-dialog#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="126" column="31" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!block;n#f_create_d_submit#0" />
-            <element signature="n#!!block;n#onlyUnique#0" />
-            <element signature="e#7#13#1" expanded="true" />
-            <element signature="n#!!block;n#f_gimme_html_pic#0" />
-            <element signature="n#!!block;n#f_add_c_cancel#0" />
+            <element signature="n#style#0;n#div#0;n#ons-dialog#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
