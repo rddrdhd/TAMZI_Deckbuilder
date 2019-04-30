@@ -272,6 +272,19 @@ document.getElementById('butt_copy').style.visibility='hidden';
 }
 function f_import_d(){
     console.log("importing deck");
+    var myKey = new Date().getTime();
+    var deck_string = $('#text_import').val();
+    var deck=deck_string.split(';');
+    var c=deck[2].split(',');
+        myObj = {
+            name: deck[0],
+            note: deck[1],
+            cards: c
+        };
+        myJSON=JSON.stringify(myObj);
+        localStorage.setItem(myKey, myJSON);
+
+
 }
 function f_export_d(){
     console.log("exporting deck");
