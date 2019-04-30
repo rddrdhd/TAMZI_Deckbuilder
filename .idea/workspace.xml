@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a9dd29e-10fd-41b0-96ac-3f9b04337cf6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/js.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,14 +15,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.23782639">
+    <splitter split-orientation="horizontal" split-proportion="0.47326732">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="521">
-                  <caret line="102" column="16" lean-forward="true" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
+                <state relative-caret-position="240">
+                  <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#ons-dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -34,15 +33,18 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="150" column="19" lean-forward="true" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
+                <state relative-caret-position="195">
+                  <caret line="202" column="37" selection-start-line="202" selection-start-column="37" selection-end-line="202" selection-end-column="37" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="n#!!block;n#f_create_d_cancel#0" />
-                    <element signature="e#7#13#1" expanded="true" />
+                    <element signature="n#!!block;n#f_create_d_submit#0" />
+                    <element signature="n#!!block;n#onlyUnique#0" />
+                    <element signature="n#!!block;n#f_search_cs#0" />
+                    <element signature="n#!!block;n#f_gimme_html_pic#0" />
+                    <element signature="n#!!block;n#f_add_c_cancel#0" />
                   </folding>
                 </state>
               </provider>
@@ -55,19 +57,14 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="173">
-                  <caret line="142" column="70" selection-start-line="142" selection-start-column="70" selection-end-line="142" selection-end-column="70" />
+                <state relative-caret-position="218">
+                  <caret line="126" column="31" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="n#!!block;n#f_delete_deck#0" />
                     <element signature="n#!!block;n#f_create_d_submit#0" />
                     <element signature="n#!!block;n#onlyUnique#0" />
-                    <element signature="n#!!block;n#f_search_cs#0" />
                     <element signature="e#7#13#1" expanded="true" />
-                    <element signature="n#!!block;n#f_gimme_card#0" />
                     <element signature="n#!!block;n#f_gimme_html_pic#0" />
-                    <element signature="n#!!block;n#f_add_c#0" />
-                    <element signature="n#!!block;n#f_add_c_submit#0" />
                     <element signature="n#!!block;n#f_add_c_cancel#0" />
                   </folding>
                 </state>
@@ -102,8 +99,12 @@
       <find>localSt</find>
       <find>image is not</find>
       <find>[</find>
-      <find>add card</find>
       <find>add_c</find>
+      <find>delete deck</find>
+      <find>add card</find>
+      <find>getitem</find>
+      <find>delete card</find>
+      <find>deck.c</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,11 +128,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="437" />
-    <option name="y" value="1192" />
-    <option name="width" value="1080" />
-    <option name="height" value="676" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="y" value="27" />
+    <option name="width" value="720" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -172,7 +172,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -215,7 +215,9 @@
       <workItem from="1556009556323" duration="131000" />
       <workItem from="1556123589287" duration="1962000" />
       <workItem from="1556536480284" duration="1960000" />
-      <workItem from="1556560401693" duration="6021000" />
+      <workItem from="1556560401693" duration="9864000" />
+      <workItem from="1556606292513" duration="3878000" />
+      <workItem from="1556610738625" duration="602000" />
     </task>
     <task id="LOCAL-00001" summary="DECKBUILDERRR">
       <created>1553623272224</created>
@@ -259,17 +261,31 @@
       <option name="project" value="LOCAL" />
       <updated>1556566569494</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Hezci tlacitko &quot;add card&quot;&#10;TODO: vymazat kartu z decku, infinitescroll">
+      <created>1556567183012</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556567183012</updated>
+    </task>
+    <task id="LOCAL-00008" summary="TODO: vymazat kartu z decku, infinitescroll">
+      <created>1556570876385</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556570876385</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52288000" />
+    <option name="totallyTimeSpent" value="60611000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="257" y="1107" width="1440" height="873" extended-state="6" />
+    <frame x="0" y="27" width="720" height="873" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.14396612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20373027" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -298,13 +314,15 @@
     <MESSAGE value="PICS IN DECKS done&#10;TODO: infinitescroll" />
     <MESSAGE value="DELETE DECKS done&#10;TODO: infinitescroll" />
     <MESSAGE value="Vyskakovaci okno s obrazkem karty DONE&#10;TODO: vymazat kartu z decku, infinitescroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vyskakovaci okno s obrazkem karty DONE&#10;TODO: vymazat kartu z decku, infinitescroll" />
+    <MESSAGE value="Hezci tlacitko &quot;add card&quot;&#10;TODO: vymazat kartu z decku, infinitescroll" />
+    <MESSAGE value="TODO: vymazat kartu z decku, infinitescroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="TODO: vymazat kartu z decku, infinitescroll" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="102" column="16" lean-forward="true" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
+        <state relative-caret-position="240">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ons-dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -316,19 +334,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="142" column="70" selection-start-line="142" selection-start-column="70" selection-end-line="142" selection-end-column="70" />
+        <state relative-caret-position="218">
+          <caret line="126" column="31" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!block;n#f_delete_deck#0" />
             <element signature="n#!!block;n#f_create_d_submit#0" />
             <element signature="n#!!block;n#onlyUnique#0" />
-            <element signature="n#!!block;n#f_search_cs#0" />
             <element signature="e#7#13#1" expanded="true" />
-            <element signature="n#!!block;n#f_gimme_card#0" />
             <element signature="n#!!block;n#f_gimme_html_pic#0" />
-            <element signature="n#!!block;n#f_add_c#0" />
-            <element signature="n#!!block;n#f_add_c_submit#0" />
             <element signature="n#!!block;n#f_add_c_cancel#0" />
           </folding>
         </state>

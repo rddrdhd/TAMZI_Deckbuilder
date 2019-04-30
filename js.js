@@ -26,13 +26,15 @@ document.addEventListener('init', function(event) {
 
 });
 
-function f_delete_deck(thisaf){
+function f_delete_deck(deckkey){
     ons.notification.confirm({
-        message: 'Do you want to delete deck \"'+thisaf+'\"?',
+        message: 'Do you want to delete deck \"'+deckkey+'\"?',
         callback: function(answer) {
 
-            console.log(thisaf.toString());
-            for(var key in localStorage){
+            console.log(deckkey.toString());
+            localStorage.removeItem(deckkey);
+            location.reload();
+           /* for(var key in localStorage){
                 var i = localStorage.getItem(key);
                 var item = JSON.parse(i);
 
@@ -42,7 +44,7 @@ function f_delete_deck(thisaf){
                     location.reload();
                 }
                 else{ console.log("nope") }
-            }
+            }*/
         }
     });
 }
@@ -84,7 +86,7 @@ function f_show_ds(){
         onsItem.setAttribute('modifier', 'tappable');
         onsItem.setAttribute('expandable', '');
         onsItem.setAttribute('data-key', myKey.toString());
-        deck_expand(onsItem,parsed);
+        deck_expand(onsItem,parsed, myKey);
         document.getElementById('list_d').appendChild(onsItem)
     }
 }
@@ -93,13 +95,13 @@ function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
 }
 
-function deck_expand(onsItem, deck){
+function deck_expand(onsItem, deck, deckkey){
     var imgstring = "";
     for(var c in deck.cards){
-        var card= f_gimme_card(deck.cards[c]);
+        console.log(deck.cards[c]+" <- u deck_expand - cardid");
 //card image with a href
         imgstring= (imgstring+
-            "<img onclick='f_show_c("+deck.cards[c]+")' src='" +
+            "<img onclick='f_show_c("+deck.cards[c]+","+deckkey+")' src='" +
             "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid="+
             deck.cards[c]+"&type=card"+
             "' alt='Image is not avaible.'"+
@@ -109,11 +111,11 @@ function deck_expand(onsItem, deck){
     onsItem.innerHTML = "<b>"+deck.name+"</b>";
     onsItem.innerHTML+="<div class=expandable-content>" +
         deck.note + "<br>" +
-        //"<ons-button modifier='quiet' onclick='f_delete_deck("+deck.name+")'>Delete deck \""+deck.name+"\"</ons-button><br>"+
+        "<ons-button modifier='quiet' onclick='f_delete_deck("+deckkey+")'>Delete deck \""+deck.name+"\"</ons-button><br>"+
 
     imgstring +
-        "<a id=\"myLink2\" title=\"Click to delete deck\"\n" +        " href=\"#\" onclick=\"f_delete_deck('"+deck.name+"');\"><h2  class='add'>☠ Delete deck</h2></a>"
-        + "</div>";
+        //"<a id=\"myLink2\" title=\"Click to delete deck\"\n" +        " href=\"#\" onclick=\"f_delete_deck('"+deck.name+"');\"><h2  class='add'>☠ Delete deck</h2></a>"
+         "</div>";
 }
 
 function f_search_cs(){
@@ -122,7 +124,7 @@ function f_search_cs(){
         dataType: "json",
         url: 'https://api.magicthegathering.io/v1/cards?name=' + search_str,
         success: function(result){
-            for(var i = 0; i< 10; i++){
+            for(var i = 0; i< 20; i++){
                 var card = result["cards"][i];
                 if(card.imageUrl !== undefined){
                     var onsItem = document.createElement("ons-list-item");
@@ -147,7 +149,7 @@ function card_expand(onsItem, card){
        /* "<a id=\"myLink\" title=\"Click to add card\"\n" +
         " href=\"#\" onclick=\"f_add_c("+card.multiverseid+");return false;\">"+
         "<h2  class='add'>⊕ Add card</h2></a>"+*/
-       "<ons-button modifier='quiet' onclick='f_add_c("+card.multiverseid+")'>Add card to deck</ons-button>"
+       "<ons-button modifier='quiet' onclick='f_add_c("+card.multiverseid+")'>ADD CARD TO DECK</ons-button>"
         //
 //end div
         +"</div>" ;
@@ -230,13 +232,27 @@ function f_refresh_gest(){
 }
 
 function f_show_c(multiverseid, deckkey){
+
+    console.log(multiverseid+","+deckkey+" f_show_c");
     var imageurl = "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid="+ multiverseid+"&type=card";
     var modal = document.querySelector('ons-modal');
     modal.innerHTML = "<br><br><br><div class='center'><img src='" + imageurl+"' alt='Somenthing gone wrong'><!--font color='#f0f8ff'> Loading...</font--> </div>";
-    modal.innerHTML += "<ons-button modifier='quiet'>Delete card from this deck</ons-button>";
+
+    modal.innerHTML += "<ons-button onclick='f_delete_card("+multiverseid+","+deckkey+")' modifier='quiet'>Delete card from this deck</ons-button>";
     modal.innerHTML += "<br><br><br><ons-button modifier='material' onclick='f_hide_c()'>Back</ons-button>";
     modal.show();
-    console.log(deckkey)
+    //location.reload();
+}
+function f_delete_card(multiverseid, deckkey){
+    console.log(multiverseid+","+deckkey+"delet card");
+    var deck = JSON.parse(localStorage.getItem(deckkey));
+    deck.cards.pop(multiverseid);
+    //localStorage[deckkey]=deck;
+    var deck_JSON = JSON.stringify(deck);
+    localStorage.setItem(deckkey,deck_JSON);//TODO
+    location.reload();
+
+
 }
 
 function f_hide_c(){
