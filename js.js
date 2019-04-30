@@ -1,6 +1,8 @@
 //caiuse.com - hledá co můžu na jaké prohlížeči použít
 //INFINITESCROLL na výsledky hledání karet
 
+//TODO něco počítat na pozadí, check na počet karet v decku, statistiky o balíčku, import/export
+
 document.addEventListener('init', function(event) {
 
     var page = event.target;
@@ -236,10 +238,10 @@ function f_show_c(multiverseid, deckkey){
     console.log(multiverseid+","+deckkey+" f_show_c");
     var imageurl = "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid="+ multiverseid+"&type=card";
     var modal = document.querySelector('ons-modal');
-    modal.innerHTML = "<br><br><br><div class='center'><img src='" + imageurl+"' alt='Somenthing gone wrong'><!--font color='#f0f8ff'> Loading...</font--> </div>";
+    modal.innerHTML = "<br><br><br><div class='center'><img src='" + imageurl+"' alt='Somenthing gone wrong' width='90%'><!--font color='#f0f8ff'> Loading...</font--> </div>";
 
     modal.innerHTML += "<ons-button onclick='f_delete_card("+multiverseid+","+deckkey+")' modifier='quiet'>Delete card from this deck</ons-button>";
-    modal.innerHTML += "<br><br><br><ons-button modifier='material' onclick='f_hide_c()'>Back</ons-button>";
+    modal.innerHTML += "<br><br><br><ons-back-button modifier='material' onclick='f_hide_c()'>Back</ons-back-button>";
     modal.show();
     //location.reload();
 }
