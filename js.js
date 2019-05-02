@@ -1,13 +1,17 @@
 //caiuse.com - hledá co můžu na jaké prohlížeči použít
 //INFINITESCROLL na výsledky hledání karet
 
-//TODO něco počítat na pozadí, check na počet karet v decku, statistiky o balíčku, import/export
-
+//TODO něco počítat na pozadí, check na počet karet v decku, statistiky o balíčku
+//const mtg = require('mtgsdk');
 document.addEventListener('init', function(event) {
 
     var page = event.target;
     if (page.id === 'page1') {
         f_refresh_gest();
+     /*   mtg.card.all()
+            .on('data', function (card) {
+                console.log(card.name)
+            });*/
 
         page.querySelector('#butt_show_ds').onclick = function() {
             document.querySelector('#myNavigator').pushPage('page2.html');
@@ -18,11 +22,11 @@ document.addEventListener('init', function(event) {
     }
     else if (page.id === 'page2') {
         f_show_ds();
-        console.log("decks page!!!");
+       // console.log("decks page!!!");
     }
     else if (page.id === 'page3') {
         f_search_cs();
-        console.log("cards page!!!");
+        //console.log("cards page!!!");
 
     }
 
@@ -33,7 +37,7 @@ function f_delete_deck(deckkey){
         message: 'Do you want to delete deck \"'+deckkey+'\"?',
         callback: function(answer) {
 
-            console.log(deckkey.toString());
+            //console.log(deckkey.toString());
             localStorage.removeItem(deckkey);
             location.reload();
            /* for(var key in localStorage){
@@ -73,7 +77,7 @@ function f_create_d_submit() {
         myJSON=JSON.stringify(myObj);
         localStorage.setItem(myKey, myJSON);
     }
-    console.log("DECK CREATED");
+    //console.log("DECK CREATED");
     document.getElementById("dialog_create_d").hide();
 }
 
@@ -100,7 +104,7 @@ function onlyUnique(value, index, self) {
 function deck_expand(onsItem, deck, deckkey){
     var imgstring = "";
     for(var c in deck.cards){
-        console.log(deck.cards[c]+" <- u deck_expand - cardid");
+       // console.log(deck.cards[c]+" <- u deck_expand - cardid");
 //card image with a href
         imgstring= (imgstring+
             "<img onclick='f_show_c("+deck.cards[c]+","+deckkey+")' src='" +
@@ -173,8 +177,7 @@ function f_gimme_html_pic(multiverseid){ //funguje hodne pomalu
         url: 'https://api.magicthegathering.io/v1/cards/' + multiverseid,
         success: function(result){
             var card = result["card"];
-            console.log("<img src='" +
-                card.imageUrl + "' alt='Image is not avaible.'>");
+            //console.log("<img src='" + card.imageUrl + "' alt='Image is not avaible.'>");
             return "<img src='" +
                 card.imageUrl + "' alt='Image is not avaible.'>";
         }
@@ -207,15 +210,15 @@ function  f_add_c(multiverseid){
 
 function f_add_c_submit(multiverseid){
     var deck_key = $('#select_d').children("option:selected").val();
-    console.log("Here we go addin da card "+multiverseid + " into " + deck_key);
+    //console.log("Here we go addin da card "+multiverseid + " into " + deck_key);
     var deck = JSON.parse(localStorage.getItem(deck_key));
     deck.cards.push(multiverseid);
     localStorage[deck_key] = deck;
     var deck_JSON = JSON.stringify(deck);
     localStorage.setItem(deck_key, deck_JSON);
 
-    console.log(deck);
-    console.log(deck_JSON);
+    //console.log(deck);
+    //console.log(deck_JSON);
     document.getElementById("dialog_add_c").hide();
 
     location.reload();
@@ -224,12 +227,12 @@ function f_add_c_submit(multiverseid){
 }
 
 function f_add_c_cancel(){
-    console.log("Here we go closin da add_c dialog");
+    //console.log("Here we go closin da add_c dialog");
     document.getElementById("dialog_add_c").hide();
 }
 
 function f_refresh_gest(){
-    console.log("Here we go refreshing da page");
+   // console.log("Here we go refreshing da page");
     var pullHook = document.getElementById('pull-hook');
     pullHook.onAction = function(done) {
         location.reload();
@@ -238,7 +241,7 @@ function f_refresh_gest(){
 
 function f_show_c(multiverseid, deckkey){
 
-    console.log(multiverseid+","+deckkey+" f_show_c");
+    //console.log(multiverseid+","+deckkey+" f_show_c");
     var imageurl = "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid="+ multiverseid+"&type=card";
     var modal = document.querySelector('ons-modal');
     modal.innerHTML = "<br><br><br><div class='center'><img src='" + imageurl+"' alt='Somenthing gone wrong' width='90%'><!--font color='#f0f8ff'> Loading...</font--> </div>";
@@ -246,10 +249,10 @@ function f_show_c(multiverseid, deckkey){
     modal.innerHTML += "<ons-button onclick='f_delete_card("+multiverseid+","+deckkey+")' modifier='quiet'>Delete card from this deck</ons-button>";
     modal.innerHTML += "<br><br><br><ons-back-button modifier='material' onclick='f_hide_c()'>Back</ons-back-button>";
     modal.show();
-    //location.reload();
+    location.reload();
 }
 function f_delete_card(multiverseid, deckkey){
-    console.log(multiverseid+","+deckkey+"delet card");
+   // console.log(multiverseid+","+deckkey+"delet card");
     var deck = JSON.parse(localStorage.getItem(deckkey));
     deck.cards.pop(multiverseid);
     //localStorage[deckkey]=deck;
@@ -312,7 +315,7 @@ function f_copy(){
             copyInput.select();
             // Zkopíruje vybraný text
             const isCopied = document.execCommand('copy');
-            console.log('Kopírování se ' + (isCopied ? '' : 'ne') + 'podařilo.')
+            console.log('Copying was ' + (isCopied ? '' : 'not ') + 'succesful.')
 
         }
 

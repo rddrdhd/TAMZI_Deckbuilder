@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a9dd29e-10fd-41b0-96ac-3f9b04337cf6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/require.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/js.js" afterDir="false" />
@@ -16,14 +18,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.36979535">
+    <splitter split-orientation="horizontal" split-proportion="0.6313433">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="431">
-                  <caret line="142" column="20" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="20" />
+                <state relative-caret-position="315">
+                  <caret line="105" column="55" lean-forward="true" selection-start-line="105" selection-start-column="55" selection-end-line="105" selection-end-column="55" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#ons-dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -36,13 +38,21 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scripts/require.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3651">
+                  <caret line="2145" selection-start-line="2145" selection-end-line="2145" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="491">
-                  <caret line="279" column="15" lean-forward="true" selection-start-line="279" selection-start-column="15" selection-end-line="279" selection-end-column="15" />
+                <state relative-caret-position="505">
+                  <caret line="250" column="17" lean-forward="true" selection-start-line="250" selection-start-column="17" selection-end-line="250" selection-end-column="17" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="n#!!block;n#f_create_d_submit#0" />
                     <element signature="n#!!block;n#onlyUnique#0" />
                     <element signature="e#7#13#1" expanded="true" />
                     <element signature="n#!!block;n#f_gimme_html_pic#0" />
@@ -59,11 +69,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="353">
-                  <caret line="283" column="66" selection-start-line="283" selection-start-column="66" selection-end-line="283" selection-end-column="66" />
+                <state relative-caret-position="-2220">
+                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="n#!!block;n#f_create_d_submit#0" />
                     <element signature="n#!!block;n#onlyUnique#0" />
                     <element signature="e#7#13#1" expanded="true" />
                     <element signature="n#!!block;n#f_gimme_html_pic#0" />
@@ -94,7 +103,6 @@
       <find>dialog</find>
       <find>show</find>
       <find>add</find>
-      <find>console.log</find>
       <find>delete</find>
       <find>key in l</find>
       <find>localSt</find>
@@ -109,6 +117,8 @@
       <find>random</find>
       <find>back</find>
       <find>select_d</find>
+      <find>console.log</find>
+      <find>location.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,18 +127,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/scripts/require.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js.js" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/DECKBUILDER.iml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
       </list>
     </option>
   </component>
@@ -141,10 +142,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <autoscrollFromSource Scope="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,7 +156,23 @@
             <path>
               <item name="tamz-deckbuilder" type="b2602c69:ProjectViewProjectNode" />
               <item name="tamz-deckbuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tamz-deckbuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tamz-deckbuilder" type="462c0819:PsiDirectoryNode" />
               <item name="TAMZ-DB" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="tamz-deckbuilder" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/tamz-deckbuilder" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -168,6 +185,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.10.0" />
     <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/Phaser3_basic" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -177,6 +195,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RunDashboard">
@@ -190,6 +209,11 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="js.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="js.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -224,7 +248,9 @@
       <workItem from="1556606292513" duration="3878000" />
       <workItem from="1556610738625" duration="5479000" />
       <workItem from="1556630976581" duration="100000" />
-      <workItem from="1556658612150" duration="4932000" />
+      <workItem from="1556658612150" duration="6470000" />
+      <workItem from="1556665167704" duration="30000" />
+      <workItem from="1556815316783" duration="5358000" />
     </task>
     <task id="LOCAL-00001" summary="DECKBUILDERRR">
       <created>1553623272224</created>
@@ -303,11 +329,25 @@
       <option name="project" value="LOCAL" />
       <updated>1556660451841</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Export done&#10;todo import">
+      <created>1556663648973</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1556663648973</updated>
+    </task>
+    <task id="LOCAL-00013" summary="IMPORT EXPORT DONE">
+      <created>1556664429396</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1556664429396</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70520000" />
+    <option name="totallyTimeSpent" value="77446000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -322,19 +362,19 @@
     <frame x="257" y="1107" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2773465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.054340154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32971507" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32971507" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.30664858" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.421981" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.20895523" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -356,13 +396,22 @@
     <MESSAGE value="ROZJETO NA TELEFONU&#10;TODO: infinitescroll" />
     <MESSAGE value="ROZJETO NA TELEFONU s hudbou a TODOs" />
     <MESSAGE value="Hiding import/export dialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hiding import/export dialog" />
+    <MESSAGE value="Export done&#10;todo import" />
+    <MESSAGE value="IMPORT EXPORT DONE" />
+    <option name="LAST_COMMIT_MESSAGE" value="IMPORT EXPORT DONE" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/scripts/require.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3651">
+          <caret line="2145" selection-start-line="2145" selection-end-line="2145" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="142" column="20" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="20" />
+        <state relative-caret-position="315">
+          <caret line="105" column="55" lean-forward="true" selection-start-line="105" selection-start-column="55" selection-end-line="105" selection-end-column="55" />
           <folding>
             <element signature="n#style#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ons-dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -375,11 +424,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="283" column="66" selection-start-line="283" selection-start-column="66" selection-end-line="283" selection-end-column="66" />
+        <state relative-caret-position="505">
+          <caret line="250" column="17" lean-forward="true" selection-start-line="250" selection-start-column="17" selection-end-line="250" selection-end-column="17" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!block;n#f_create_d_submit#0" />
             <element signature="n#!!block;n#onlyUnique#0" />
             <element signature="e#7#13#1" expanded="true" />
             <element signature="n#!!block;n#f_gimme_html_pic#0" />

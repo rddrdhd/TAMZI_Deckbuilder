@@ -8,7 +8,9 @@
         <link rel="stylesheet" href="https://unpkg.com/onsenui/css/dark-onsen-css-components.min.css"><!--light/dark theme switch-->
         <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
         <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
-        <script src="js.js"> </script>
+        <script src="js.js"></script>
+       <script data-main="js" src="scripts/require.js"></script>
+
         <style>
             body{
                 text-align: center;
@@ -44,6 +46,48 @@
             .back-button__icon{
                 fill: #b1db22;
             }
+            #container {
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+                z-index: -1;
+                -webkit-filter: blur(15px);
+                -moz-filter: blur(15px);
+                -o-filter: blur(15px);
+                -ms-filter: blur(15px);
+                filter: blur(15px);
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
+            .video_contain{
+                position: absolute;
+                z-index: -1;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                overflow: hidden;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-image: none;
+            }
+
+            #videobcg {
+                position: absolute;
+                z-index:-1;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                min-height: 50%;
+                min-width: 50%;
+            }
         </style>
     </head>
     <body>
@@ -51,6 +95,8 @@
 <!--HOME-->
     <template id="page1.html">
         <ons-page id="page1">
+
+
         <ons-toolbar> <div style="display: block;" class="center">DECKBUILDER</div> </ons-toolbar>
 <br>
 
@@ -66,10 +112,17 @@
                 Show decks</ons-button><br><br>
             <ons-button modifier="material" id="import_export" onclick="f_show_ie()" >
                 Import/export deck</ons-button>
-            <br><br><br><br>Background music<br><br><audio controls loop>
+            <br><br><br><br>Background music<br><br>
+            <audio  controls loop>
                 <source src="sax.ogg" type="audio/ogg">
                 Your browser does not support the audio element.
-            </audio><br>
+            </audio>
+            <div id="container"><br>
+            <video id ="videobcg" preload="auto"
+                   width="100%" autoplay="true" loop>
+                <source src="https://fat.gfycat.com/QuarterlyAbsoluteDromaeosaur.webm">
+            </video>
+            </div>
 
             <ons-bottom-toolbar modifier="transparent"><!--br><br><ons-button modifier="material" id="butt_rand" onclick="f_show_c(3,3)">Random button</ons-button><br><br-->
 
@@ -140,10 +193,10 @@
                 <br>
             <select id="select_d_export"></select>
            <br><br> <ons-button modifier="flat" id="butt_export_deck" onclick="f_export_d()">Export deck</ons-button>
-<br><br><br> <input id="generated_deck" type="text" value="deck" readonly>
+<br><br> <input id="generated_deck" type="text" value="deck" readonly>
 
-            <ons-button type=hidden modifier="flat" id = "butt_copy" onclick="f_copy()">Copy to clipboard</ons-button>
-         <br>   <ons-back-button onclick="f_hide_ie()">Back</ons-back-button>
+            <br><br><ons-button type=hidden modifier="flat" id = "butt_copy" onclick="f_copy()">Copy to clipboard</ons-button>
+         <br><br>   <ons-back-button onclick="f_hide_ie()">Back</ons-back-button>
 
         </div>
     </ons-dialog>
