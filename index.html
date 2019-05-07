@@ -9,14 +9,15 @@
         <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
         <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
         <script src="js.js"></script>
-       <script data-main="js" src="scripts/require.js"></script>
 
         <style>
             body{
                 text-align: center;
-                padding: 10px}
+                padding: 10px;
+                }
             .list-item{
                 color: #ecfae8;
+
             }
             .expandable-content{color: #F5FAFA;
             padding: 20px}
@@ -93,6 +94,7 @@
     <body>
     <ons-navigator animation="lift" swipeable id="myNavigator" page="page1.html"></ons-navigator>
 <!--HOME-->
+
     <template id="page1.html">
         <ons-page id="page1">
 
@@ -118,13 +120,13 @@
                 Your browser does not support the audio element.
             </audio>
             <div id="container"><br>
-            <video id ="videobcg" preload="auto"
-                   width="100%" autoplay="true" loop>
+            <video id ="videobcg" preload="auto" width="100%" autoplay="true" loop>
                 <source src="https://fat.gfycat.com/QuarterlyAbsoluteDromaeosaur.webm">
             </video>
             </div>
+            <br><br><!--ons-button modifier="material" id="butt_rand" onclick="f_gimme_deck_stats(deck)">Random button</ons-button><br><br-->
 
-            <ons-bottom-toolbar modifier="transparent"><!--br><br><ons-button modifier="material" id="butt_rand" onclick="f_show_c(3,3)">Random button</ons-button><br><br-->
+            <ons-bottom-toolbar modifier="transparent">
 
                 Optimalized for <ons-icon icon="fa-firefox"></ons-icon> and <ons-icon icon="fa-chrome"></ons-icon><br>
             </ons-bottom-toolbar>
@@ -139,6 +141,7 @@
             <ons-list id="list_d"></ons-list>
         </ons-page>
     </template>
+
 <!--CARDS-->
     <template id="page3.html">
         <ons-page id="page3">
@@ -153,6 +156,7 @@
 
         </ons-page>
     </template>
+
 <!--CREATE DECK-->
     <ons-dialog id="dialog_create_d">
 
@@ -163,6 +167,7 @@
             <ons-button modifier="material" id="butt_create_d_submit" onclick="f_create_d_submit()">Create deck</ons-button>
         </div>
     </ons-dialog>
+
 <!--ADD CARD-->
     <ons-dialog id="dialog_add_c">
 
@@ -174,13 +179,14 @@
         </div>
     </ons-dialog>
 
-    <!--SHOW CARD-->
+<!--SHOW CARD-->
     <ons-modal id = "ons-modal" direction="up" animation="lift">
         <div  style="text-align: center">
 
         </div>
     </ons-modal>
-    <!--IMPORT/EXPORT DECK-->
+
+<!--IMPORT/EXPORT DECK-->
     <ons-dialog id="dialog_ie">
 
         <div style="text-align: center; padding: 10px;">
@@ -200,7 +206,6 @@
 
         </div>
     </ons-dialog>
-
 
     </body>
 </html>

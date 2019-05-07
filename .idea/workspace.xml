@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a9dd29e-10fd-41b0-96ac-3f9b04337cf6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/require.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/js.js" afterDir="false" />
@@ -18,19 +16,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6313433">
+    <splitter split-orientation="horizontal" split-proportion="0.17110266">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="105" column="55" lean-forward="true" selection-start-line="105" selection-start-column="55" selection-end-line="105" selection-end-column="55" />
+                <state relative-caret-position="405">
+                  <caret line="210" column="7" lean-forward="true" selection-start-line="210" selection-start-column="7" selection-end-line="210" selection-end-column="7" />
                   <folding>
+                    <element signature="n#head#0;n#html#0;n#!!top" />
+                    <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                    <element signature="n#template#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#template#1;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#template#2;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#ons-dialog#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#ons-dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#ons-dialog#1;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#ons-dialog#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#ons-modal#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#ons-dialog#2;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#ons-dialog#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
@@ -38,25 +45,24 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/scripts/require.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3651">
-                  <caret line="2145" selection-start-line="2145" selection-end-line="2145" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="505">
-                  <caret line="250" column="17" lean-forward="true" selection-start-line="250" selection-start-column="17" selection-end-line="250" selection-end-column="17" />
+                <state relative-caret-position="2040">
+                  <caret line="196" column="37" selection-start-line="196" selection-start-column="37" selection-end-line="196" selection-end-column="37" />
                   <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="n#!!block;n#onlyUnique#0" />
-                    <element signature="e#7#13#1" expanded="true" />
-                    <element signature="n#!!block;n#f_gimme_html_pic#0" />
+                    <element signature="n#!!block;n#f_delete_deck#0" />
+                    <element signature="n#!!block;n#f_create_d#0" />
+                    <element signature="n#!!block;n#f_create_d_cancel#0" />
+                    <element signature="n#!!block;n#f_show_ds#0" />
+                    <element signature="n#!!block;n#card_expand#0" />
+                    <element signature="n#!!block;n#deck_selector#0" />
+                    <element signature="n#!!block;n#f_add_c_submit#0" />
                     <element signature="n#!!block;n#f_add_c_cancel#0" />
+                    <element signature="n#!!block;n#f_refresh_gest#0" />
+                    <element signature="n#!!block;n#f_show_c#0" />
+                    <element signature="n#!!block;n#f_delete_card#0" />
+                    <element signature="n#!!block;n#f_hide_c#0" />
+                    <element signature="n#!!block;n#f_show_ie#0" />
                   </folding>
                 </state>
               </provider>
@@ -69,14 +75,31 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-2220">
-                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+                <state relative-caret-position="536">
+                  <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
                   <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="n#!!block;n#onlyUnique#0" />
+                    <element signature="e#189#723#0" />
+                    <element signature="n#!!block;n#f_delete_deck#0" />
+                    <element signature="n#!!block;n#f_create_d#0" />
+                    <element signature="n#!!block;n#f_create_d_cancel#0" />
+                    <element signature="n#!!block;n#f_create_d_submit#0" />
+                    <element signature="n#!!block;n#f_show_ds#0" />
+                    <element signature="n#!!block;n#f_search_cs#0" />
+                    <element signature="n#!!block;n#card_expand#0" />
                     <element signature="e#7#13#1" expanded="true" />
+                    <element signature="n#!!block;n#f_gimme_card#0" />
                     <element signature="n#!!block;n#f_gimme_html_pic#0" />
+                    <element signature="n#!!block;n#f_add_c#0" />
+                    <element signature="n#!!block;n#deck_selector#0" />
+                    <element signature="n#!!block;n#f_add_c_submit#0" />
                     <element signature="n#!!block;n#f_add_c_cancel#0" />
+                    <element signature="n#!!block;n#f_refresh_gest#0" />
+                    <element signature="n#!!block;n#f_delete_card#0" />
+                    <element signature="n#!!block;n#f_hide_c#0" />
+                    <element signature="n#!!block;n#f_show_ie#0" />
+                    <element signature="n#!!block;n#f_hide_ie#0" />
+                    <element signature="n#!!block;n#f_copy#0" />
+                    <element signature="n#!!block;n#f_download#0" />
                   </folding>
                 </state>
               </provider>
@@ -107,7 +130,6 @@
       <find>key in l</find>
       <find>localSt</find>
       <find>image is not</find>
-      <find>[</find>
       <find>add_c</find>
       <find>delete deck</find>
       <find>add card</find>
@@ -119,6 +141,9 @@
       <find>select_d</find>
       <find>console.log</find>
       <find>location.</find>
+      <find>0d0d0d</find>
+      <find>html</find>
+      <find>[</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,11 +158,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="684" />
-    <option name="y" value="1366" />
-    <option name="width" value="697" />
-    <option name="height" value="880" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="y" value="27" />
+    <option name="width" value="741" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -146,6 +170,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="tamz-deckbuilder" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/tamz-deckbuilder" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,23 +191,7 @@
             <path>
               <item name="tamz-deckbuilder" type="b2602c69:ProjectViewProjectNode" />
               <item name="tamz-deckbuilder" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tamz-deckbuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tamz-deckbuilder" type="462c0819:PsiDirectoryNode" />
               <item name="TAMZ-DB" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="tamz-deckbuilder" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/tamz-deckbuilder" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -250,7 +269,9 @@
       <workItem from="1556630976581" duration="100000" />
       <workItem from="1556658612150" duration="6470000" />
       <workItem from="1556665167704" duration="30000" />
-      <workItem from="1556815316783" duration="5358000" />
+      <workItem from="1556815316783" duration="6890000" />
+      <workItem from="1556823187135" duration="1119000" />
+      <workItem from="1557221960622" duration="1111000" />
     </task>
     <task id="LOCAL-00001" summary="DECKBUILDERRR">
       <created>1553623272224</created>
@@ -343,11 +364,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556664429396</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Gandalf background! &lt;3">
+      <created>1556821805414</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1556821805415</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77446000" />
+    <option name="totallyTimeSpent" value="81208000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -359,10 +387,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="257" y="1107" width="1440" height="873" extended-state="6" />
+    <frame x="0" y="27" width="812" height="873" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.054340154" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.110473454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -398,25 +426,29 @@
     <MESSAGE value="Hiding import/export dialog" />
     <MESSAGE value="Export done&#10;todo import" />
     <MESSAGE value="IMPORT EXPORT DONE" />
-    <option name="LAST_COMMIT_MESSAGE" value="IMPORT EXPORT DONE" />
+    <MESSAGE value="Gandalf background! &lt;3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gandalf background! &lt;3" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/require.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3651">
-          <caret line="2145" selection-start-line="2145" selection-end-line="2145" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/require.js" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="105" column="55" lean-forward="true" selection-start-line="105" selection-start-column="55" selection-end-line="105" selection-end-column="55" />
+        <state relative-caret-position="405">
+          <caret line="210" column="7" lean-forward="true" selection-start-line="210" selection-start-column="7" selection-end-line="210" selection-end-column="7" />
           <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#template#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ons-dialog#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#ons-dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-dialog#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#ons-dialog#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-modal#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-dialog#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#ons-dialog#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -424,14 +456,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="250" column="17" lean-forward="true" selection-start-line="250" selection-start-column="17" selection-end-line="250" selection-end-column="17" />
+        <state relative-caret-position="536">
+          <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!block;n#onlyUnique#0" />
+            <element signature="e#189#723#0" />
+            <element signature="n#!!block;n#f_delete_deck#0" />
+            <element signature="n#!!block;n#f_create_d#0" />
+            <element signature="n#!!block;n#f_create_d_cancel#0" />
+            <element signature="n#!!block;n#f_create_d_submit#0" />
+            <element signature="n#!!block;n#f_show_ds#0" />
+            <element signature="n#!!block;n#f_search_cs#0" />
+            <element signature="n#!!block;n#card_expand#0" />
             <element signature="e#7#13#1" expanded="true" />
+            <element signature="n#!!block;n#f_gimme_card#0" />
             <element signature="n#!!block;n#f_gimme_html_pic#0" />
+            <element signature="n#!!block;n#f_add_c#0" />
+            <element signature="n#!!block;n#deck_selector#0" />
+            <element signature="n#!!block;n#f_add_c_submit#0" />
             <element signature="n#!!block;n#f_add_c_cancel#0" />
+            <element signature="n#!!block;n#f_refresh_gest#0" />
+            <element signature="n#!!block;n#f_delete_card#0" />
+            <element signature="n#!!block;n#f_hide_c#0" />
+            <element signature="n#!!block;n#f_show_ie#0" />
+            <element signature="n#!!block;n#f_hide_ie#0" />
+            <element signature="n#!!block;n#f_copy#0" />
+            <element signature="n#!!block;n#f_download#0" />
           </folding>
         </state>
       </provider>

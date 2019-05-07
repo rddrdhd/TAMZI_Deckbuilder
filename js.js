@@ -1,17 +1,9 @@
-//caiuse.com - hledá co můžu na jaké prohlížeči použít
-//INFINITESCROLL na výsledky hledání karet
 
-//TODO něco počítat na pozadí, check na počet karet v decku, statistiky o balíčku
-//const mtg = require('mtgsdk');
 document.addEventListener('init', function(event) {
 
     var page = event.target;
     if (page.id === 'page1') {
         f_refresh_gest();
-     /*   mtg.card.all()
-            .on('data', function (card) {
-                console.log(card.name)
-            });*/
 
         page.querySelector('#butt_show_ds').onclick = function() {
             document.querySelector('#myNavigator').pushPage('page2.html');
@@ -22,12 +14,9 @@ document.addEventListener('init', function(event) {
     }
     else if (page.id === 'page2') {
         f_show_ds();
-       // console.log("decks page!!!");
     }
     else if (page.id === 'page3') {
         f_search_cs();
-        //console.log("cards page!!!");
-
     }
 
 });
@@ -97,14 +86,9 @@ function f_show_ds(){
     }
 }
 
-function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
-}
-
 function deck_expand(onsItem, deck, deckkey){
     var imgstring = "";
     for(var c in deck.cards){
-       // console.log(deck.cards[c]+" <- u deck_expand - cardid");
 //card image with a href
         imgstring= (imgstring+
             "<img onclick='f_show_c("+deck.cards[c]+","+deckkey+")' src='" +
@@ -117,11 +101,12 @@ function deck_expand(onsItem, deck, deckkey){
     onsItem.innerHTML = "<b>"+deck.name+"</b>";
     onsItem.innerHTML+="<div class=expandable-content>" +
         deck.note + "<br>" +
+       // "<ons-button modifier='quiet' onclick='f_gimme_deck_stats("+deck+")'>Deck status \""+deck.name+"\"</ons-button><br>"+
+        imgstring + "<br>"+
         "<ons-button modifier='quiet' onclick='f_delete_deck("+deckkey+")'>Delete deck \""+deck.name+"\"</ons-button><br>"+
 
-    imgstring +
-        //"<a id=\"myLink2\" title=\"Click to delete deck\"\n" +        " href=\"#\" onclick=\"f_delete_deck('"+deck.name+"');\"><h2  class='add'>☠ Delete deck</h2></a>"
-         "</div>";
+
+       "</div>";
 }
 
 function f_search_cs(){
@@ -184,7 +169,7 @@ function f_gimme_html_pic(multiverseid){ //funguje hodne pomalu
     });
 }
 
-function  f_add_c(multiverseid){
+function f_add_c(multiverseid){
 
     var jqxhr = $.ajax({
         dataType: "json",
@@ -199,7 +184,8 @@ function  f_add_c(multiverseid){
     document.getElementById("dialog_add_c").show();
 
     }
-    function deck_selector(element_id){
+
+function deck_selector(element_id){
         for(var i = 0; i< localStorage.length; i++) {
             var myKey = localStorage.key(i);
             var json = localStorage.getItem(myKey);
@@ -249,8 +235,9 @@ function f_show_c(multiverseid, deckkey){
     modal.innerHTML += "<ons-button onclick='f_delete_card("+multiverseid+","+deckkey+")' modifier='quiet'>Delete card from this deck</ons-button>";
     modal.innerHTML += "<br><br><br><ons-back-button modifier='material' onclick='f_hide_c()'>Back</ons-back-button>";
     modal.show();
-    location.reload();
+    //location.reload();
 }
+
 function f_delete_card(multiverseid, deckkey){
    // console.log(multiverseid+","+deckkey+"delet card");
     var deck = JSON.parse(localStorage.getItem(deckkey));
@@ -273,6 +260,7 @@ document.getElementById('generated_deck').style.visibility='hidden';
 document.getElementById('butt_copy').style.visibility='hidden';
     document.getElementById('dialog_ie').show();
 }
+
 function f_import_d(){
     console.log("importing deck");
     var myKey = new Date().getTime();
@@ -286,9 +274,9 @@ function f_import_d(){
         };
         myJSON=JSON.stringify(myObj);
         localStorage.setItem(myKey, myJSON);
-
-
+        location.reload();
 }
+
 function f_export_d(){
     console.log("exporting deck");
     var deck_key = $('#select_d_export').children("option:selected").val();
@@ -299,10 +287,12 @@ function f_export_d(){
     document.getElementById('generated_deck').style.visibility='visible';
     document.getElementById('butt_copy').style.visibility='visible';
 }
+
 function f_hide_ie(){
 
     document.getElementById('dialog_ie').hide();
 }
+
 function f_copy(){
     const copyInput = document.querySelector('#generated_deck');
     const copyButton = document.querySelector('#butt_copy');
@@ -321,17 +311,7 @@ function f_copy(){
 
     })
 }
-/*
-function f_copy() {//TODO?
-var copy_deck = document.querySelector('#generated_deck');
-    var copy_button = document.querySelector('#butt_copy');
-    copy_button.addEventListener('click',() =>{
-    if(document.queryCommandSupported('copy')){
-        const range=document.createRange();
-        range.selectNode(copy_deck);
-        window.getSelection().addRange(range);
-        const isCopied = document.execCommand('copy');
-        console.log(isCopied ? 'Zkopírováno' : 'Kopírování se nezdařilo');
-        window.getSelection().removeRange(range);
-    }})
-}*/
+
+function f_download(){
+    //všechno?
+}
